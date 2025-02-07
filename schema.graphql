@@ -1,16 +1,22 @@
-type CollectionCreated @entity(immutable: true) {
-  id: Bytes!
-  collectionAddress: Bytes! # address
-  owner: Bytes! # address
-  name: String! # string
-  symbol: String! # string
-  genre: String! # string
-  showTitle: String! # string
-  location: String! # string
-  date: String! # string
-  startTime: String! # string
-  djName: String! # string
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
+type Collection @entity {
+  id: ID!
+  collectionAddress: Bytes!
+  owner: Bytes!
+  name: String!
+  symbol: String!
+  genre: String!
+  showTitle: String!
+  location: String!
+  date: String!
+  startTime: String!
+  djName: String!
+  nfts: [NFT!]! @derivedFrom(field: "collection")
+}
+
+type NFT @entity {
+  id: ID!
+  collection: Collection!
+  tokenId: BigInt!
+  minter: Bytes!
+  data: String!
 }
