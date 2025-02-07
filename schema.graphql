@@ -1,0 +1,16 @@
+type CollectionCreated @entity(immutable: true) {
+  id: Bytes!
+  collectionAddress: Bytes! # address
+  owner: Bytes! # address
+  name: String! # string
+  symbol: String! # string
+  genre: String! # string
+  showTitle: String! # string
+  location: String! # string
+  date: String! # string
+  startTime: String! # string
+  djName: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

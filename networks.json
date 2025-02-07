@@ -1,0 +1,8 @@
+{
+  "base-sepolia": {
+    "ERC721Factory": {
+      "address": "0x33cA2Be8548928C08C22D781C6f3E67FE5eBB66d",
+      "startBlock": 21588181
+    }
+  }
+}
