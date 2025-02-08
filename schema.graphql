@@ -10,7 +10,7 @@ type Collection @entity {
   date: String!
   startTime: String!
   djName: String!
-  nfts: [NFT!]! @derivedFrom(field: "collection")
+  nfts: [NFT!] @derivedFrom(field: "collection")
 }
 
 type NFT @entity {

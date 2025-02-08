@@ -43,15 +43,15 @@ templates:
         - event: Minted(indexed address,indexed uint256,string,string)
           handler: handleMinted
       file: ./src/nft-collection.ts
-  - name: NFTMetadata
-    kind: file/arweave
-    mapping:
-      apiVersion: 0.0.7
-      language: wasm/assemblyscript
-      file: ./src/nft-collection.ts
-      handler: handleMetadata
-      entities:
-        - NFTMetadata
-      abis:
-        - name: NFTCollection
-          file: ./abis/NFTCollection.json
+  # - name: NFTMetadata
+  #   kind: file/arweave
+  #   mapping:
+  #     apiVersion: 0.0.7
+  #     language: wasm/assemblyscript
+  #     file: ./src/nft-collection.ts
+  #     handler: handleMetadata
+  #     entities:
+  #       - NFTMetadata
+  #     abis:
+  #       - name: NFTCollection
+  #         file: ./abis/NFTCollection.json

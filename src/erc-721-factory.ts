@@ -4,7 +4,7 @@ import { NFTCollection } from "../generated/templates"
 
 export function handleCollectionCreated(event: CollectionCreatedEvent): void {
   let entity = new Collection(
-    (event.transaction.hash.concatI32(event.logIndex.toI32())).toHexString()
+    (event.params.collectionAddress.toHex())
   )
   // entity.contractAddress = event.params.collectionAddress
   entity.collectionAddress = event.params.collectionAddress
